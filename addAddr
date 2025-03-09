@@ -1,0 +1,17 @@
+async function waitForButtonAndClick(selector, count, delay) {
+    for (let i = 0; i < count; i++) {
+        let button = document.querySelector(selector);
+        
+        if (button) {
+            button.click();
+            console.log(`Клик ${i + 1} выполнен`);
+        } else {
+            console.log("Кнопка не найдена, жду...");
+        }
+
+        await new Promise(resolve => setTimeout(resolve, delay));
+    }
+}
+
+// Запускаем (ищет кнопку и кликает 51 раз с задержкой 800 мс)
+waitForButtonAndClick('.bit-btn.bit-btn-round.bit-btn-main.bit-btn-md', 51, 800);
