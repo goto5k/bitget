@@ -14,4 +14,4 @@ async function waitForButtonAndClick(selector, count, delay) {
 }
 
 // Запускаем (ищет кнопку и кликает 51 раз с задержкой 4 сек)
-waitForButtonAndClick('.bit-btn.bit-btn-round.bit-btn-main.bit-btn-md', 51, 4000);
+waitForButtonAndClick('.bit-btn.bit-btn-round.bit-btn-main.bit-btn-md', 50, 3100);
